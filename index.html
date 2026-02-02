@@ -4,18 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>anydef</title>
-    
-<script type="module">
-import init, * as bindings from '/anydef-dc485c83f5078762.js';
-const wasm = await init({ module_or_path: '/anydef-dc485c83f5078762_bg.wasm' });
-
-
-window.wasmBindings = bindings;
-
-
-dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
-
-</script>
+    <link data-trunk rel="rust" data-wasm-opt="z"/>
     <style>
         * {
             margin: 0;
@@ -74,6 +63,6 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
             color: #6e7681;
         }
     </style>
-<link rel="modulepreload" href="/anydef-dc485c83f5078762.js" crossorigin="anonymous" integrity="sha384-Sk1o9+Tl+Dy07trY20I/ZA+1bNC+CSxBEKXk2pVVjiaeA3jnme+MSE2rsNA4Keib"><link rel="preload" href="/anydef-dc485c83f5078762_bg.wasm" crossorigin="anonymous" integrity="sha384-cZ+58sfhfFTFrZhDwg4x2I/8zHEwZfKw/nORx9wybVYaTqBJhNpIk6Aoc521mazk" as="fetch" type="application/wasm"></head>
+</head>
 <body></body>
 </html>
