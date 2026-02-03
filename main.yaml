@@ -1,0 +1,30 @@
+header:
+  logo: anydef
+  nav:
+    - label: CV
+      url: cv.pdf
+    - label: GitHub
+      url: https://github.com/anydef/anydef.github.io
+
+hero:
+  title: Pavlo Fedyna
+  subtitle: Senior Software Engineer building search systems, LLM-powered interfaces, and high-traffic services. Crafting scalable solutions with Java, Rust, Kotlin, and Python on AWS.
+  buttons:
+    - label: Bio
+      style: primary
+    - label: Social
+      style: secondary
+    - label: Download CV
+      style: link
+      url: cv.pdf
+
+footer:
+  text: Built with
+  links:
+    - label: Leptos
+      url: https://leptos.dev
+    - label: Typst
+      url: https://typst.app
+    - label: Rust
+      url: https://www.rust-lang.org
+  subtext: Powered by LLM magic.

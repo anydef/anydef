@@ -1,11 +1,10 @@
-[package]
-name = "anydef"
+[workspace]
+members = ["crates/web"]
+resolver = "2"
+
+[workspace.package]
 version = "0.1.0"
 edition = "2021"
-
-[dependencies]
-leptos = { version = "0.6", features = ["csr"] }
-console_error_panic_hook = "0.1"
 
 [profile.release]
 opt-level = 'z'

@@ -1,0 +1,10 @@
+[build]
+dist = "../../docs"
+
+[watch]
+ignore = ["../../docs", "cv.pdf"]
+
+[[hooks]]
+stage = "pre_build"
+command = "typst"
+command_arguments = ["compile", "../../cv.typ", "cv.pdf"]

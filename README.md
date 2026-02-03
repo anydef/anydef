@@ -1,6 +1,14 @@
 # anydef
 
-A personal website built with Rust and Leptos, compiled to WebAssembly.
+Personal website built with Rust and Leptos, compiled to WebAssembly for GitHub Pages.
+
+## Technology Stack
+
+- **Leptos** - Rust web framework with reactive UI
+- **WebAssembly** - Rust compiled to WASM for browser execution
+- **Trunk** - Build tool and dev server for Rust WASM apps
+- **Typst** - PDF generation for downloadable CV
+- **YAML** - Configuration and CV data
 
 ## Prerequisites
 
@@ -9,102 +17,62 @@ A personal website built with Rust and Leptos, compiled to WebAssembly.
    ```bash
    rustup target add wasm32-unknown-unknown
    ```
-3. Install Trunk (build tool for Rust WASM apps):
+3. Install Trunk:
    ```bash
    cargo install trunk
+   ```
+4. Install Typst:
+   ```bash
+   brew install typst
+   # or: cargo install typst-cli
    ```
 
 ## Development
 
-Run the development server with hot reload:
-
 ```bash
+cd crates/web
 trunk serve
 ```
 
-Open http://localhost:8080 in your browser.
+Opens at http://localhost:8080. The CV PDF is automatically generated on each build.
 
 ## Build for Production
 
-Build optimized static files:
-
 ```bash
+cd crates/web
 trunk build --release
 ```
 
-Output will be in the `docs/` directory.
+Output goes to `docs/`. The pre-build hook automatically compiles `cv.typ` to `cv.pdf`.
 
-## Deploy to GitHub Pages
+## Configuration
 
-### Option 1: Deploy from `docs/` folder
-
-1. Build the project:
-   ```bash
-   trunk build --release
-   ```
-2. Commit and push the `docs/` folder
-3. In GitHub repository settings:
-   - Go to Settings > Pages
-   - Source: "Deploy from a branch"
-   - Branch: `main` (or your branch)
-   - Folder: `/docs`
-   - Save
-
-### Option 2: GitHub Actions (automated)
-
-Create `.github/workflows/deploy.yml`:
-
-```yaml
-name: Deploy to GitHub Pages
-
-on:
-  push:
-    branches: [main]
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: dtolnay/rust-toolchain@stable
-        with:
-          targets: wasm32-unknown-unknown
-      - name: Install Trunk
-        run: cargo install trunk
-      - name: Build
-        run: trunk build --release --public-url /anydef/
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-```
-
-Note: If deploying to a user site (username.github.io), remove `--public-url /anydef/` from the build command.
+| File | Purpose |
+|------|---------|
+| `cv.yaml` | CV data (single source of truth for web and PDF) |
+| `cv.typ` | Typst template for PDF styling |
+| `main.yaml` | Website text (header, hero, footer) |
 
 ## Project Structure
 
 ```
 .
-├── Cargo.toml          # Rust dependencies
-├── Trunk.toml          # Trunk build configuration
-├── index.html          # HTML template
-├── rust-toolchain.toml # Rust toolchain config
-└── src/
-    └── main.rs         # Application code
+├── cv.yaml                 # CV data
+├── cv.typ                  # Typst PDF template
+├── main.yaml               # Website text
+├── crates/web/
+│   ├── Trunk.toml          # Build config with pre-build hook
+│   ├── index.html
+│   ├── style.css
+│   └── src/
+│       ├── main.rs
+│       ├── config.rs
+│       └── components/
+└── docs/                   # Build output (GitHub Pages)
 ```
+
+## Deploy to GitHub Pages
+
+1. Build: `cd crates/web && trunk build --release`
+2. Commit and push `docs/`
+3. GitHub Settings > Pages > Deploy from branch `main` folder `/docs`

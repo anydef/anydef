@@ -1,5 +1,0 @@
-[build]
-dist = "docs"
-
-[watch]
-ignore = ["docs"]

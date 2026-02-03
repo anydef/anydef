@@ -1,0 +1,134 @@
+personal:
+  name: Pavlo Fedyna
+  title: Senior Software Engineer
+  location: Hamburg Metropolitan Area, Germany
+  intro: |
+    Software engineer with 15+ years of experience building scalable, high-traffic services and data processing pipelines on AWS. 
+    Currently focused on search systems, hybrid/semantic search, and LLM-powered conversational interfaces at one of Germany's largest retailers.
+    Core stack spans Java, Rust, Kotlin and Python on AWS, with a growing focus on Rust for performance-critical services.
+    Clean code and XP advocate with a user-centric mindset.
+  email: fed.pavlo@gmail.com
+  github: https://github.com/anydef
+  linkedin: https://linkedin.com/in/anydef
+
+experience:
+  - title: Senior Software Engineer
+    company: Otto&Co
+    date: Oct 2021 - Present
+    skills: [Java, Kotlin, Rust, Python, Spring, Spring WebFlux, Helidon 4, Solr, Kafka, Hazelcast, AWS, AWS CDK, Docker, Terraform, Github Actions, Jenkins, Packer, Grafana, Prometheus, Mimir, Langchain4j]
+    description: |
+      Architecting and developing the search platform for Germany's largest online retailer.
+      Built and maintained a hybrid search core service combining lexical and semantic search.
+      Rewrote the hybrid search core in Rust, significantly improving performance.
+      Migrated infrastructure from CloudFormation to Terraform and CI/CD from Jenkins to Github Actions.
+      Optimized AWS runtime costs.
+      Built and maintained data pipelines for stream processing of product data into the search index.
+      Own observability and resilience stack.
+      Developed an LLM-backed Query Intent service.
+      Developed agentic conversational search assistant (storefront AI chatbot)
+      Prototyped voice-to-voice conversational search.
+
+  - title: Tech Lead
+    company: Caregonexx
+    date: Oct 2020 - Sep 2021
+    skills: [Java, TypeScript, SQL, Spring, React, AWS, Docker, PostgreSQL]
+    description: |
+      Led a team of 5 engineers, collaborating with the PO on quarterly OKRs.
+      Refined user and system requirements before feeding them into the development pipeline.
+      Designed and developed a SaaS solution for fleet and shipment management.
+      Built a tour cost and time optimization service.
+
+  - title: Senior Software Engineer
+    company: Caregonexx
+    date: Aug 2020 - Oct 2020
+    skills: [Java, TypeScript, SQL, Spring, React, AWS, Docker, PostgreSQL]
+    description: |
+      Implemented and maintained an internal customer-facing solution for fleet and shipment management.
+      Integrated GPS providers for real-time fleet tracking.
+      Introduced TDD, pair programming, and CI/CD practices to the team.
+
+  - title: Senior Software Engineer
+    company: Zalando Marketing Services
+    date: Feb 2018 - Aug 2020
+    skills: [Python, Java, Scala, SQL, Spring, Spark, Airflow, Databricks, AWS, Docker, Kubernetes, PostgreSQL, GraphQL, React, Jenkins]
+    description: |
+      Built the reporting solution for Zalando's ad management self-service platform.
+      Rewrote the reporting and analytics pipeline, migrating to cloud
+      and achieving significant reduction in daily operational costs (10x).
+      Implemented high-load data stream consumers powering the analytical processing pipeline.
+      Developed an analytics module for the marketplace platform.
+      Established 24/7 on-call support structure for the team.
+      Introduced TDD, pair programming, and CI/CD practices.
+      Enabled stakeholder access to data through self-service sharing solutions.
+
+  - title: Senior Software Engineer
+    company: EOS Technology Solutions
+    date: Aug 2017 - Feb 2018
+    skills: [Java, SQL, JavaScript, Spring, Hibernate, React, Selenium, Cucumber, Kafka, Jenkins]
+    description: |
+      Implemented and maintained a client-data management system.
+      Refactored and added test coverage to legacy parts of the system.
+      Optimized the ORM layer to improve user experience.
+      Introduced BDD and automated web testing.
+
+  - title: Lead Software Engineer
+    company: Smaato Inc.
+    date: Mar 2017 - Aug 2017
+    skills: [Java, SQL, JavaScript, Python, React, Selenium, Docker, AWS, Jenkins]
+    description: |
+      Led development of the B2B client portal, delivering the MVP on time
+      despite staffing constraints and high management pressure.
+      Led development of the ad delivery auction management system.
+      Built a plugin framework for the auction system, enabling sales engineers
+      to onboard advertisers without developer involvement.
+
+  - title: Software Engineer
+    company: Smaato Inc.
+    date: Oct 2014 - Mar 2017
+    skills: [Java, SQL, JavaScript, Spring, Hibernate, Docker, AWS, Jenkins, Packer, Kafka]
+    description: |
+      Implemented and maintained a high-load, distributed ad delivery auction management system.
+      Refactored the auction handling algorithm, improving CPU performance by 20%
+      and reducing cluster size.
+      Migrated and rewrote several legacy applications and components.
+
+  - title: Software Engineer
+    company: Edvantis Inc.
+    date: Mar 2012 - Sep 2014
+    skills: [Java, SQL, JavaScript, Spring, AWS]
+    description: Delivered a variety of projects for US and European customers.
+
+  - title: Junior Software Engineer
+    company: Lvivsoft Inc.
+    date: Jul 2011 - Mar 2012
+    skills: [Java, SQL, JavaScript, Spring, Solr, AWS]
+    description: |
+      Implemented and maintained a social media platform.
+      Deployed and tested application backend and frontend.
+
+education:
+  - degree: B.S in Applied Linguistics
+    institution: "State University 'Lviv Polytechnics'"
+    date: Aug 2006 - Aug 2010
+
+skills:
+  languages: [Java, Kotlin, Python, Rust, TypeScript, JavaScript, SQL]
+  frameworks: [Spring, Spring WebFlux, Helidon 4, React, GraphQL, Langchain4j]
+  infrastructure: [AWS, AWS CDK, Docker, Kubernetes, Terraform, Kafka, Hazelcast, Github Actions, Jenkins, Packer]
+  observability: [Grafana, Prometheus, Mimir]
+  data: [Solr, PostgreSQL, Spark, Airflow, Databricks]
+
+interests:
+  - name: Rust on Embedded Systems
+    description: Exploring bare-metal programming and IoT applications with Rust's safety guarantees
+  - name: Game Development
+    description: Building games as a creative outlet and to explore real-time systems architecture
+  - name: Homelab Infrastructure
+    description: Running a self-hosted Proxmox cluster with Kubernetes for learning and experimentation
+
+work_preferences:
+  employment: Full-time
+  arrangements:
+    - Hybrid
+    - Remote (preferred)
+  travel: Open to limited travel as needed
