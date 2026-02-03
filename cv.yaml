@@ -18,11 +18,12 @@ experience:
     skills: [Java, Kotlin, Rust, Python, Spring, Spring WebFlux, Helidon 4, Solr, Kafka, Hazelcast, AWS, AWS CDK, Docker, Terraform, Github Actions, Jenkins, Packer, Grafana, Prometheus, Mimir, Langchain4j]
     description: |
       Architecting and developing the search platform for Germany's largest online retailer.
+      Maintaining search retrieval via high-performance Solr cluster.
+      Developing and maintaining high-throughput index data ingestion pipeline for Solr.
       Built and maintained a hybrid search core service combining lexical and semantic search.
       Rewrote the hybrid search core in Rust, significantly improving performance.
       Migrated infrastructure from CloudFormation to Terraform and CI/CD from Jenkins to Github Actions.
       Optimized AWS runtime costs.
-      Built and maintained data pipelines for stream processing of product data into the search index.
       Own observability and resilience stack.
       Developed an LLM-backed Query Intent service.
       Developed agentic conversational search assistant (storefront AI chatbot)
