@@ -19,6 +19,7 @@
   #v(8pt)
   #text(size: 9pt)[
     #link("mailto:" + cv.personal.email)[#cv.personal.email] |
+    #link(cv.personal.homepage)[Homepage] |
     #link(cv.personal.github)[GitHub] |
     #link(cv.personal.linkedin)[LinkedIn]
   ]
