@@ -87,6 +87,15 @@
 
 #v(12pt)
 
+// Languages
+#text(size: 12pt, weight: "bold", fill: accent)[Languages]
+#line(length: 100%, stroke: 0.5pt + accent)
+#v(4pt)
+
+#cv.languages.join(", ")
+
+#v(12pt)
+
 // Interests
 #text(size: 12pt, weight: "bold", fill: accent)[Interests]
 #line(length: 100%, stroke: 0.5pt + accent)

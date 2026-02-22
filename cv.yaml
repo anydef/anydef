@@ -113,6 +113,11 @@ education:
     institution: "State University 'Lviv Polytechnics'"
     date: Aug 2006 - Aug 2010
 
+languages:
+  - English
+  - German
+  - Ukrainian
+
 skills:
   languages: [Java, Kotlin, Python, Rust, TypeScript, JavaScript, SQL]
   frameworks: [Spring, Spring WebFlux, Helidon 4, React, GraphQL, Langchain4j]
